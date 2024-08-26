@@ -9,7 +9,7 @@
 
 <%@include file="AdminHeader.jsp" %>     
      
-      <div class="clr"></div>
+      <!--<div class="clr"></div>-->
     
   </body>
 </html>
