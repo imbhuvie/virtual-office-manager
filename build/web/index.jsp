@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -19,16 +17,17 @@
                 <div class="header_resize">
 
                     <div class="logo">
-                        <h1><a href="index.html"><span>Office</span>Manager</a></h1>
+                        <h1><a href="index.jsp"><span>Office</span>Manager</a></h1>
                     </div>
                     <div class="clr"></div>
                     <div class="menu_nav" style="width:1000px; ">
                         <ul>
-                            <li class="active"><a href="index.html"><span>Home Page</span></a></li>
-                            <li><a href="support.jsp"><span>Emp Login</span></a></li>
-                            <li><a href="about.jsp"><span>About Us</span></a></li>
+                            <li class="active"><a href="index.jsp"><span>Home Page</span></a></li>
                             <li><a href="blog.jsp"><span>Blog</span></a></li>
+                            <li><a href="services.jsp"><span>Services</span></a></li>
+                            <li><a href="about.jsp"><span>About Us</span></a></li>
                             <li><a href="contact.jsp"><span>Contact Us</span></a></li>
+
                         </ul>
                     </div>
                     <div class="clr"></div>
@@ -40,12 +39,26 @@
                 </div>
             </div>
             <center>
-                <div style="width:300px;height:250px;">
+                <div style="width:300px;height:300px;">
                     <form action="login" method="get">
-                        <fieldset style="width: 300px;height: 250px;">
+                        <fieldset style="width: 300px;height: 300px;">
                             <legand><h2 style="color:green;">User Login</h2></legand>
+                           
+                                <%
+            if(request.getParameter("msg")!=null ||request.getParameter("error")!=null){
+                if(request.getParameter("msg")!=null){
+                String msg=request.getParameter("msg");
+                out.println("<p style='color:green;font-size:15px;font-weight:bold;text-align:center;' >"+msg+"</p>");
+                       }
+                if(request.getParameter("error")!=null){
+                String error=request.getParameter("error");
+                out.println("<p style='color:red;font-size:15px;font-weight:bold;text-align:center;' >"+error+"</p>");
+                       }
+            }
+            %>
+                           
                             <table width=200px, height="150px">
-                                <tr width="30px" height="30px"><td width="10px"></td><td width="10px" align="center"><select name="t1" style="width: 140px;height: 70;background-color: #A0EDE5;"><option>..Select user type..</option><option value="admin">Admin</option><option value="company">Company</option></select></td><td width="10px"></td></tr> 
+                                <tr width="30px" height="30px"><td width="10px"></td><td width="10px" align="center"><select name="t1" style="width: 140px;height: 70;background-color: #A0EDE5;"><option>..Select user type..</option><option value="admin">Admin</option><option value="Company">Company</option><option value="Employee">Employee</option></select></td><td width="10px"></td></tr> 
 
                                 <tr><td width="30px" align=center><lable>User_Id-</lable><lable style="color:red;">*</lable><td><input type=text name="t2"/></td></tr><tr height="10px"></tr>
                                 <tr><td width="30px" align=left><lable>Password-</lable><lable style="color:red;">*</lable></td><td><input type=password name="t3"/></td></tr><tr height="5px"></tr>
@@ -58,7 +71,9 @@
                         </fieldset>
                     </form>
                 </div>
+                
             </center><br/><br/>
+            
             <div class="clr"></div>
         </div>
         </div>

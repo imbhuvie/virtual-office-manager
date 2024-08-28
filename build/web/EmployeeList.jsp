@@ -3,7 +3,11 @@
     Created on : 26 Aug 2024, 4:31:30 pm
     Author     : bhupendraVerma
 --%>
-
+<%
+          if(session.getAttribute("user")==null){
+          response.sendRedirect("index.jsp?error=please login");
+    }
+          %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="AdminHeader.jsp" %>
 

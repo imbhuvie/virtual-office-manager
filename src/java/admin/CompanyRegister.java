@@ -32,17 +32,23 @@ public class CompanyRegister extends HttpServlet {
         db.pstmt=db.con.prepareStatement("insert into login(user,password,user_type,ac_status) values(?,?,?,?)");
         db.pstmt.setString(1, user); 
        db.pstmt.setString(2, pswd); 
-       db.pstmt.setString(3, "admin"); 
+       db.pstmt.setString(3, "company"); 
        db.pstmt.setString(4, "1"); 
        int i=db.pstmt.executeUpdate(); 
        out.print("Done.");
        if(i>0) 
        { 
-         response.sendRedirect("index.html?msg=Company Added Successfully"); 
+         response.sendRedirect("registration.jsp?msg=Company Registerd Successfully"); 
        } 
+       else{
+           response.sendRedirect("registration.jsp?error=Company does not Registerd"); 
+  
+       }
        }
         catch(Exception e){
-            out.print(e.getMessage());
+//            out.print(e.getMessage());
+           response.sendRedirect("registration.jsp?error=Company does not Registerd"); 
+
             
         }
     }

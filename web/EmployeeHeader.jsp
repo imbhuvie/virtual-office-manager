@@ -17,16 +17,17 @@
     <div class="header_resize">
      
       <div class="logo">
-        <h1><a href="index.html"><span>Virtual</span>Office System</a></h1>
+        <h1><a href="EmployeeHome.jsp"><span>Virtual</span>Office System</a></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav" style="width: 1200px;">
         <ul>
-          <li class="active"><a href="adminHome.jsp"><span>Home</span></a></li>
-          <li><a href="viewemp11.jsp"><span>View Company Data</span></a></li>
-          <li><a href="empsal12.jsp"><span>Emp Details </span></a></li>
-          <li><a href="CompanyChanPass11.jsp"><span>Change Password</span></a></li>
-          <li><a href="logout11"><span>Logout</span></a></li>
+          <li class="active"><a href="EmployeeProfile.jsp"><span>View Profile</span></a></li>
+          <li><a href="EditEmpProfile.jsp"><span>Edit Profile</span></a></li>
+          <li><a href="AddEmpAttendance.jsp"><span>Add Attendance </span></a></li>
+          <li><a href="AttendanceReport.jsp"><span>Attendance Report</span></a></li>
+          <li><a href="ChangeEmpPassword.jsp"><span>Change Password</span></a></li>
+          <li><a href="Logout"><span>Logout</span></a></li>
         </ul>
       </div> </div>
       </div>

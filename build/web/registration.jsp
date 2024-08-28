@@ -25,7 +25,7 @@
             <div class="header"> 
                 <div class="header_resize"> 
                     <div class="logo"> 
-                        <h1><a href="index.html"><span>Office</span>Manager</a></h1> 
+                        <h1><a href="index.jsp"><span>Office</span>Manager</a></h1> 
                     </div> 
                     <div class="clr"></div> 
                     <div class="menu_nav" style="width:1000px; "> 
@@ -49,6 +49,18 @@
                 <!--header end here-->
                 <center> 
                     <div style="width:350px;height:250px;"> 
+                        <%
+            if(request.getParameter("msg")!=null ||request.getParameter("error")!=null){
+                if(request.getParameter("msg")!=null){
+                String msg=request.getParameter("msg");
+                out.println("<p style='color:green;font-size:15px;font-weight:bold;text-align:center;' >"+msg+"</p>");
+                       }
+                if(request.getParameter("error")!=null){
+                String error=request.getParameter("error");
+                out.println("<p style='color:red;font-size:15px;font-weight:bold;text-align:center;' >"+error+"</p>");
+                       }
+            }
+            %>
                         <form action="CompanyRegister" method="get"> 
                             <fieldset style="width: 350px;height: 250px;border:5px solid black;background-color:dodgerblue;"> 
                                 <legand><h2 style="color:whitesmoke;">Company Registration</h2></legand> 

@@ -26,8 +26,15 @@
                 +"<tr><td width=250>Employee Code</td><td><input type=number name=code value='"+db.rst.getString(1)+"'></td></tr>"   
                 +"<tr><td>Employee Name</td><td><input type=text name=name value='"+db.rst.getString(2)+"'></td></tr>"   
                 +"<tr><td>Date of Birth</td><td><input type=date name=dob value='"+db.rst.getString(3)+"'></td></tr> "  
-                +"<tr><td>Gender</td><td><input type=radio name=gen value=Male>Male" 
-                +"<input type=radio name=gen value=Female>Female</td></tr>"   
+                +"<tr><td>Gender</td><td><input type=radio name=gen value=Male ");
+                if(db.rst.getString(4).equalsIgnoreCase("male")){
+                out.print("checked");
+    }
+                out.print(" >Male <input type=radio name=gen value=Female ");
+                                if(db.rst.getString(4).equalsIgnoreCase("female")){
+                out.print("checked");
+    }
+                out.print(" >Female</td></tr>"   
                 +"<tr><td>Post</td><td><input type=text name=post value='"+db.rst.getString(5)+"'></td></tr>"   
                 +"<tr><td>Address</td><td><input type=text name=addr value='"+db.rst.getString(6)+"'></td></tr>"   
                 +"<tr><td>City</td><td><input type=text name=city value='"+db.rst.getString(7)+"'></td></tr> "  

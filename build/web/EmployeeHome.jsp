@@ -10,6 +10,6 @@
 <%@include file="EmployeeHeader.jsp" %>     
      
       <div class="clr"></div>
-    
+      <h1>Welcome Employee</h1>
   </body>
 </html>

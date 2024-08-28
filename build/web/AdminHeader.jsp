@@ -17,7 +17,7 @@
                 <div class="header_resize">
 
                     <div class="logo">
-                        <h1><a href="index.html"><span>Virtual</span>Office System</a></h1>
+                        <h1><a href="AdminHome.jsp"><span>Virtual</span>Office System</a></h1>
                     </div>
                     <div class="clr"></div>
                     <div class="menu_nav" style="width: 1200px;">
@@ -27,7 +27,7 @@
                             <li><a href="EmployeeList.jsp"><span>Employee List</span></a></li>
                             <li><a href="EmployeeAttendance.jsp"><span>Attendance Report</span></a></li>
 
-                            <li><a href="ChangePassword.jsp"><span>Change Password</span></a></li>
+                            <li><a href="ChangeAdminPassword.jsp"><span>Change Password</span></a></li>
                             <li><a href="Logout"><span>Logout</span></a></li>
                         </ul>
                     </div> </div>

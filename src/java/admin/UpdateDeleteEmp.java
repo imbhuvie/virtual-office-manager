@@ -48,17 +48,26 @@ public class UpdateDeleteEmp extends HttpServlet {
                 db.pstmt.setString(11, code);
                 int i = db.pstmt.executeUpdate();
                 if (i > 0) {
-                    response.sendRedirect("AdminHome.jsp?msg=Employee Record is Upadated");
+                    response.sendRedirect("UpdateEmployee.jsp?msg=Employee Record is Upadated");
+                    }
+                else{
+                    response.sendRedirect("UpdateEmployee.jsp?error=Employee Record is not Upadated");
+                    
                 }
-            } else {
-                db.pstmt = db.con.prepareStatement("delete from emp_mstr where ecode=?");
-                db.pstmt.setString(1, code);
-                int i = db.pstmt.executeUpdate();
-                if (i > 0) {
-                    response.sendRedirect("AdminHome.jsp?msg=Employee Record is Deleted");
-
-                }
+                
             }
+                else {
+                    db.pstmt = db.con.prepareStatement("delete from emp_mstr where ecode=?");
+                    db.pstmt.setString(1, code);
+                    int i = db.pstmt.executeUpdate();
+                    if (i > 0) {
+                        response.sendRedirect("UpdateEmployee.jsp?msg=Employee Record is Deleted");
+                    }
+                    else{
+                        response.sendRedirect("UpdateEmployee.jsp?error=Employee Record is not Deleted");
+                        
+                    }
+                }
         } catch (Exception e) {
             e.printStackTrace();
         }

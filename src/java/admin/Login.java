@@ -33,17 +33,17 @@ public class Login extends HttpServlet {
                     HttpSession session = request.getSession();
                     session.setAttribute("user", userName);
                     if (userType.equalsIgnoreCase("admin")) {
-                        response.sendRedirect("AdminHome.jsp");
+                        response.sendRedirect("AdminHome.jsp?msg=success");
                     } else {
-                        response.sendRedirect("EmployeeHome.jsp");
+                        response.sendRedirect("EmployeeHome.jsp?msg=success");
                     }
                 } else {
-                    out.println("<h1>Account has been blocked</h1>");
+                    response.sendRedirect("index.jsp?error=Your account has been blocked.");
 
                 }
 
             } else {
-                response.sendRedirect("index.html?msg=username or password incorrect");
+                response.sendRedirect("index.jsp?error=Username or password is incorrect.");
             }
         } catch (Exception e) {
 
